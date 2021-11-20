@@ -24,6 +24,10 @@ const Index =props => {
       return (
         <div key={_id} className="playlist">
           <p>{name}, {album}</p> 
+          <img src={image} alt=""/>  
+          <br></br>
+          <button id={_id} onClick={removePlaylist}>Delete</button>
+         
          
         </div>
       )
