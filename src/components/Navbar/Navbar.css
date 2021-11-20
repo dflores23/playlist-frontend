@@ -6,6 +6,7 @@
     height: 75px;
     background-color: #4d06f5;
     color: black;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .nav-links{
@@ -15,13 +16,19 @@
     width: 75%;
 }
 
-.logout,
 .newPlaylist,
-.myPlaylist {
+.myPlaylist,
+.signup,
+.login {
     text-decoration: none;
     color: black;
     font-size: 20px;
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
+}
+
+.login {
+   border: 1px solid white; 
+   border-radius: 10px;
 }
