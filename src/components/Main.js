@@ -3,9 +3,6 @@ import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom"
 import Index from "../pages/Index"
 import Show from "../pages/Show"
-require("dotenv").config();
-console.log(process.env.URL)
-const { APIKEY } = process.env;
  
 const Main = props => {
   const [playlists, setPlaylists] = useState(null)
