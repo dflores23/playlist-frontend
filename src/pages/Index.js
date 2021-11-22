@@ -6,6 +6,7 @@
 import { Link, useNavigate } from "react-router-dom"
 import Newform from "../components/Newform"
 import Form from "../components/Newform"
+import Search from "../components/Search"
 
 const Index =props => {
   const navigate = useNavigate()
@@ -43,6 +44,7 @@ const Index =props => {
   return (
     <>
       <h1>Index</h1>
+      <Search/>
       <Newform />
       {props.playlists ? loaded() : loading()}
     </>
