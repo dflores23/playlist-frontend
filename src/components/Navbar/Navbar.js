@@ -7,10 +7,13 @@ import "./Navbar.css"
     return <nav className="navBar">
         <h3 className="logo">App name or Logo</h3>
         <ul className="nav-links">
-            <Link to="/newplaylist" className="newPlaylist">
+            <Link to="playlist/newplaylist" className="newPlaylist">
                 <li>New Playlist</li>
             </Link>
-            <Link to="/myplaylist" className="myPlaylist">
+            <Link to="playlist/newVideo" className="newPlaylist">
+                <li>New Video</li>
+            </Link>
+            <Link to="/playlist" className="myPlaylist">
                 <li>My Playlist</li>
             </Link>
             <Link to="/signup" className="signup">
