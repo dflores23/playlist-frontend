@@ -4,6 +4,7 @@ import { Route, Routes, Outlet, useParams, useLocation } from "react-router-dom"
 import Index from "../pages/Index"
 import Show from "../pages/Show"
 import VidIndex from "../pages/VidIndex"
+import Search from "./Search";
   
 
 
@@ -49,6 +50,17 @@ const Main = props => {
     getPlaylists()
   }
 
+  const createVideo = async (video) => {
+    await fetch(URL, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(video)
+    })
+    getPlaylists()
+  }
+
   const deletePlaylist = async (id) => {
     await fetch(URL + id, {
       method: "delete"
@@ -78,6 +90,9 @@ const Main = props => {
           />
           <Route path=":id" element={
             <VidIndex videos={videos} />
+          } />
+          <Route path="newvideo" element={
+            <Search playlists={playlists} createVideo={createVideo} />
           } />
         </Route>
       </Routes>
