@@ -1,17 +1,23 @@
+import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"
+import { FaStream, FaMusic } from "react-icons/fa";
+
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Lato:wght@100&display=swap" rel="stylesheet"/>
 
     
     function Navbar(props) {
-    return <nav className="navBar">
-        <h3 className="logo">App name or Logo</h3>
-        <ul className="nav-links">
+        const [isMobile, setIsMobile] = useState(false);
+
+    return <nav className="navbar">
+        <h3 className="logo"><FaMusic/></h3>
+        <ul className={isMobile ? "nav-links-mobile" : "nav-links"} onClick={() => setIsMobile(false)}>
             <Link to="/newplaylist" className="newPlaylist">
                 <li>New Playlist</li>
             </Link>
-            <Link to="/myplaylist" className="myPlaylist">
-                <li>My Playlist</li>
+            <Link to="/playlist" className="Playlist">
+                <li>Playlist</li>
             </Link>
             <Link to="/signup" className="signup">
                 <li>Sign Up</li>
@@ -19,8 +25,13 @@ import "./Navbar.css"
             <Link to="/login" className="login">
                 <li>Login</li>
             </Link>
+            <button className="menu-icon-button"><FaStream/></button>
         </ul>
     </nav>
 }
 
 export default Navbar
+
+{/* <button className="mobile-menu-icon" onClick{() => setIsMobile(!isMobile)} >
+                {isMobile ? (<i className="fas fa-times"></i>) : (<i className="fas fa-bars"></i>)}
+            </button> */}

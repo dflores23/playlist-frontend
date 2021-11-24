@@ -1,12 +1,24 @@
 /* https://www.youtube.com/watch?v=P3W7MZ3JkyA */
-.navBar{
+/* https://react-icons.github.io/react-icons/icons?name=fa */
+:root {
+  --main-bg-color: #4d06f5;
+  --text-color: black;
+  --hover-color: white;
+  --mobile-bg-color:#675e7b;
+}
+
+.navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 75px;
-    background-color: #4d06f5;
-    color: black;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
     font-family: 'Josefin Sans', sans-serif;
+}
+
+.logo {
+    margin-left: 10px;
 }
 
 .nav-links{
@@ -17,7 +29,7 @@
 }
 
 .newPlaylist,
-.myPlaylist,
+.Playlist,
 .signup,
 .login {
     text-decoration: none;
@@ -29,6 +41,115 @@
 }
 
 .login {
-   border: 1px solid white; 
+   border: 1px solid var(--hover-color); 
    border-radius: 10px;
+} 
+
+.menu-icon-button {
+    display: none;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    border-color: transparent;
+}
+.logo:hover {
+    color: white;
+}
+.newPlaylist:hover {
+        color: white;
+        cursor: pointer;
+        border: 1px solid white; 
+        border-radius: 10px;
+    }
+.Playlist:hover {
+        color: white;
+        cursor: pointer;
+        border: 1px solid white; 
+        border-radius: 10px;
+    }
+.signup:hover {
+        color: white;
+        cursor: pointer;
+        border: 1px solid white; 
+        border-radius: 10px;
+    }
+.login:hover {
+        color: white;
+        cursor: pointer;
+        border: 3px solid white; 
+        border-radius: 10px;
+    }
+
+
+@media screen and (max-width: 414px) {
+    /* .Log{
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 35px;
+    } */
+    .nav-links{
+        position: absolute;
+        display: block;
+        /* list-style: none; */
+        background-color: var(--mobile-bg-color);
+        left: 0;
+        top: 0;
+        transition: all 0.5s ease-out;
+        width: 100%;
+    }
+    .nav-links-mobile{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: orange;
+        left: 0;
+        top: 75px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+    }
+
+    .newPlaylist,
+    .myPlaylist,
+    .login,
+    .signup {
+        color: white;
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        transition: all .5s ease;
+    }
+
+   
+
+    .login {
+        border: none;
+    }
+
+    .mobile-menu-icon{
+        display: block;
+        position: absolute;
+        font-size: 32px;
+        color: white;
+        background-color: violet;
+        border: none;
+        outline: none;
+        top: 15px;
+        right: 25px;
+    }
+
+    .menu-icon-button {
+    /* font-size: 18px; */
+    /* color: white;
+    background-color: transparent;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    border-color: transparent; */
+    }
 }
