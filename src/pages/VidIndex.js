@@ -3,16 +3,15 @@
 ----------------------------------*/
 
 
-import { Link, useNavigate, Outlet } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
 import Newform from "../components/Newform"
 import Form from "../components/Newform"
 import Search from "../components/Search"
+import VideoCard from "../components/VideoCard"
 
-
-const Index =props => {
+const VidIndex = props => {
   const navigate = useNavigate()
-
-
 
   const removePlaylist = (e) => {
     props.deletePlaylist(e.target.id)
@@ -20,21 +19,19 @@ const Index =props => {
   }
 
   const loaded = () => (
-    props.playlists.map((playlist) => {
-
-      const { _id, playlistName, genre, artist, album, image, url } = playlist
-
+    props.videos.map((video) => {
+      console.log("video:", video)
+      const { _id, vidName, genre, artist, album, image, vidUrl } = video
+      console.log("id: ",_id)
     
       return (
         <div key={_id} className="playlist">
-          <Outlet/>
-          <Link to={"/playlist/"+_id}><p>{playlistName}</p></Link>
-          <button id={_id} onClick={removePlaylist}>Delete</button>
-         
+          <VideoCard vidSource={vidUrl} vidTitle={vidName}/>
         </div>
       )
     })
   )
+
 
   const loading = () => {
     return <h1>Loading...</h1>;
@@ -43,12 +40,12 @@ const Index =props => {
 
   return (
     <>
-      <h1>Index</h1>
+      <h1>Video Index</h1>
       <Search/>
       <Newform />
-      {props.playlists ? loaded() : loading()}
+      {props.videos ? loaded() : loading()}
     </>
   )
 }
 
-export default Index
+export default VidIndex

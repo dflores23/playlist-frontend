@@ -33,7 +33,3 @@ import { FaStream, FaMusic } from "react-icons/fa";
 }
 
 export default Navbar
-
-{/* <button className="mobile-menu-icon" onClick{() => setIsMobile(!isMobile)} >
-                {isMobile ? (<i className="fas fa-times"></i>) : (<i className="fas fa-bars"></i>)}
-            </button> */}
