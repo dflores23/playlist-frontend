@@ -8,15 +8,16 @@ import { FaStream, FaMusic } from "react-icons/fa";
 
     
     function Navbar(props) {
-        const [isMobile, setIsMobile] = useState(false);
+        const [isMobile, setIsMobile] = useState(true);
 
     return <nav className="navbar">
         <h3 className="logo"><FaMusic/></h3>
-        <ul className={isMobile ? "nav-links-mobile" : "nav-links"} onClick={() => setIsMobile(false)}>
+
+        <ul className={isMobile ? "nav-links-mobile" : "nav-links"} onClick={() => setIsMobile(!isMobile)}>
             <Link to="/newplaylist" className="newPlaylist">
                 <li>New Playlist</li>
             </Link>
-            <Link to="/playlist" className="Playlist">
+            <Link to="/playlist" className="playlist">
                 <li>Playlist</li>
             </Link>
             <Link to="/signup" className="signup">
@@ -25,8 +26,9 @@ import { FaStream, FaMusic } from "react-icons/fa";
             <Link to="/login" className="login">
                 <li>Login</li>
             </Link>
-            <button className="menu-icon-button"><FaStream/></button>
         </ul>
+        <button className="menu-icon-button" onClick={() => setIsMobile(!isMobile)}><FaStream />
+        </button>
     </nav>
 }
 
