@@ -6,18 +6,27 @@ import Show from "../pages/Show"
 import VidIndex from "../pages/VidIndex"
 import Search from "./Search";
 import Login from "../pages/Login"
-  
+import Home from "../pages/Home"
+// import Signup from "../pages/Signup"
 
 
 const Main = props => {
-  const {createVideo, createPlaylist, deletePlaylist, playlists, videos} = props
+  const {createVideo, createPlaylist, deletePlaylist, playlists, videos, getVideos} = props
 
 
 
   return (
     <main>
       <Routes>
-        <Route path="playlist" element={<><Outlet/></>}>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="playlist"
+          element={
+            <>
+              <Outlet />
+            </>
+          }
+        >
           <Route
             path=""
             element={
@@ -28,18 +37,21 @@ const Main = props => {
               />
             }
           />
-          <Route path=":id" element={
-            <VidIndex videos={videos} />
-          } />
-          <Route path="newvideo" element={
-            <Search playlists={playlists} createVideo={createVideo} />
-          } />
-          
-          <Route path="login" element={
-            <Login/>
-          } />
-          
+          <Route
+            path=":id"
+            element={<VidIndex videos={videos} getVideos={getVideos} />}
+          />
+
+          <Route path="login" element={<Login />} />
+
+          {/* <Route path="signup" element={
+            <Signup/>
+          } /> */}
         </Route>
+        <Route
+          path="newplaylist"
+          element={<Search playlists={playlists} createVideo={createVideo} />}
+        />
       </Routes>
     </main>
   );
