@@ -6,6 +6,9 @@ import Show from "../pages/Show"
 import VidIndex from "../pages/VidIndex"
 import Search from "./Search";
 import Login from "../pages/Login"
+import Newform from "./Newform";
+  
+
 import Home from "../pages/Home"
 // import Signup from "../pages/Signup"
 
@@ -37,6 +40,17 @@ const Main = props => {
               />
             }
           />
+
+
+          <Route path="newvideo" element={
+            <Search playlists={playlists} createVideo={createVideo} />
+          } />
+          
+          <Route path="login" element={
+            <Login/>
+          } />
+
+
           <Route
             path=":id"
             element={<VidIndex videos={videos} getVideos={getVideos} />}
@@ -48,8 +62,13 @@ const Main = props => {
             <Signup/>
           } /> */}
         </Route>
+
+          <Route path="newplaylist" element={
+            <Newform playlist={playlists}/>
+          } />
         <Route
-          path="videosearch"
+          path="search"
+
           element={<Search playlists={playlists} createVideo={createVideo} />}
         />
       </Routes>
