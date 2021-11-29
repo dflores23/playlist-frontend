@@ -14,9 +14,9 @@ const Search = (props) => {
       `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${term}&key=${apiKey}`
       );
       const data = await response.json()
-      console.log("This is response: " + response);
-      console.log("This is data: " + data);
-      console.log("This is data: " + data.items);
+      //console.log("This is response: " + response);
+      //console.log("This is data: " + data);
+      //console.log("This is data: " + data.items);
       setSearchResults(data.items)
   };
 
@@ -25,7 +25,7 @@ const Search = (props) => {
   
     const displayResults = () => (
       searchResults.map((searchResult) => {
-        
+        console.log("searchResult:", searchResult)
         const { id, snippet } = searchResult
         let title = snippet.title.replaceAll('&#39;', "'")
 
