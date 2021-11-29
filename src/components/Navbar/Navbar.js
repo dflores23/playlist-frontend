@@ -16,7 +16,7 @@ import { FaStream, FaMusic } from "react-icons/fa";
         <ul className={isMobile ? "nav-links-mobile" : "nav-links"} onClick={() => setIsMobile(!isMobile)}>
             <Link to="/search" className="search">
                 <li>Search</li>
-
+            </Link>
             <Link to="/home" className="home">
                 <li>Home</li>
 
