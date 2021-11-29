@@ -13,7 +13,9 @@ import VideoCard from "../components/VideoCard"
 const VidIndex = props => {
   const navigate = useNavigate()
 
-  const removePlaylist = (e) => {
+
+
+  const removeVideo = (e) => {
     props.deletePlaylist(e.target.id)
     navigate("/")
   }

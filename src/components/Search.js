@@ -7,7 +7,6 @@ const Search = (props) => {
   const apiKey = process.env.REACT_APP_APIKEY
   const [searchPhrase, setSearchPhrase] = useState("")
   const [searchResults, setSearchResults] = useState([])
-  const {createVideo, playlists} = props
 
   const getResults = async (term) => {
     term = term.split(" ").join("%20")
@@ -21,6 +20,13 @@ const Search = (props) => {
       //console.log("This is data: " + data.items);
       setSearchResults(data.items)
   };
+  
+
+  const handleChange = event => {
+      setSearchPhrase( event.target.value )
+
+  }
+
 
 
   
@@ -31,21 +37,13 @@ const Search = (props) => {
         const { id, snippet } = searchResult
         const source = `https://www.youtube.com/embed/${id.videoId}`
         let title = snippet.title.replaceAll('&#39;', "'")
-        const video = {
-          vidName: title,
-          vidUrl: source,
-          vidChannel: snippet.channelTitle,
-          playlistID: "61a41920dd87f22701ae6e92"
-        }
 
-        const handleClick = () => {
-          createVideo(video)
-        }
+        
 
         return (
           <>
-            <VideoCard key={id.videoId} vidSource={source} vidTitle={title} videoInfo={searchResult} />
-            <button onClick={handleClick}>+</button>
+            <VideoCard key={id.videoId} vidSource={source} vidTitle={title} videoInfo={searchResult} search {...props}/>
+            
           </>
 
         )
@@ -62,10 +60,7 @@ const Search = (props) => {
   
   }
 
-  const handleChange = event => {
-    setSearchPhrase( event.target.value )
-
-  }
+  
 
   return (
     <>
@@ -78,6 +73,8 @@ const Search = (props) => {
         />
         <input type="submit" value="search"></input>
       </form>
+
+
 
       {searchResults.length > 1 ? displayResults() : <h1>Type in the searchbox above to add videos to your playlist</h1>}
     </>
