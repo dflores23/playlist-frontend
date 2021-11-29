@@ -37,6 +37,7 @@
     width: 75%;
 } 
 
+.search,
 .home,
 .newPlaylist,
 .playlist,
@@ -73,6 +74,10 @@
 }
 .logo:hover {
     color: white;
+}
+.search:hover {
+    color: white;
+    cursor: pointer;
 }
 .newPlaylist:hover {
         color: white;
@@ -144,6 +149,9 @@
         height: 100%;
         left: -100%; */
     }
+
+
+    .search,
     .home,
     .newPlaylist,
     .playlist,
