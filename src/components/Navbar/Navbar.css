@@ -36,7 +36,7 @@
     list-style: none;
     width: 75%;
 } 
-
+.search,
 .newPlaylist,
 .playlist,
 .signup,
@@ -67,6 +67,10 @@
 }
 .logo:hover {
     color: white;
+}
+.search:hover {
+    color: white;
+    cursor: pointer;
 }
 .newPlaylist:hover {
         color: white;
@@ -139,6 +143,7 @@
         left: -100%; */
     }
 
+    .search,
     .newPlaylist,
     .playlist,
     .signup,
