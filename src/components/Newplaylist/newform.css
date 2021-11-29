@@ -1,0 +1,15 @@
+form {
+    display: flex;
+    
+    justify-content: center;
+    align-content: center;
+    margin-top: 20vh;
+    flex-wrap: wrap;
+}
+
+input {
+    display: block;
+    justify-content: center;
+    align-content: center;
+
+}

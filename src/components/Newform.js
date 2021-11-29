@@ -1,15 +1,13 @@
 import React from "react"    // react
 import { useState } from "react";
+import "./Newplaylist/newform.css"
 
 function Newform(props) {
     const [playlist, setPlaylist] = useState({
-        name: "",
-        songs: "",
-        genre: "",
-        artist: "",
-        album: "",
-        image: "",
-        url: "",
+        userName: "",
+        playlistName: "",
+        playlistTags: "",
+
     }
     )
     const handleChange = (event) => {
@@ -22,42 +20,28 @@ function Newform(props) {
         event.preventDefault()
         props.addPlaylist(playlist)
         setPlaylist({
-            name: "",
-            songs: "",
-            genre: "",
-            artist: "",
-            album: "",
-            image: "",
-            url: "",
+            userName: "",
+            playlistName: "",
+            playlistTags: "",
         })
     }
     return (
         <section>
             <form onSubmit={handleSubmit}>
-                <input placeholder="Name"
-                    name="name"
+                <input placeholder="Username"
+                    name="userName"
                     value={playlist.name}
                     onChange={handleChange} />
-            </form>
-            <form onSubmit={handleSubmit}>
-                <input placeholder="Song"
-                    name="song"
+                <input placeholder="Playlist Name"
+                    name="playlistName"
                     value={playlist.song}
                     onChange={handleChange} />
-            </form>
-            <form onSubmit={handleSubmit}>
-                <input placeholder="Artist"
-                    name="artist"
+                <input placeholder="Tag Name"
+                    name="playlistTags"
                     value={playlist.artist}
                     onChange={handleChange} />
+                <input type="submit" value="Create Playlist"/>
             </form>
-            <form onSubmit={handleSubmit}>
-                <input placeholder="Url"
-                    name="url"
-                    value={playlist.url}
-                    onChange={handleChange} />
-            </form>
-                    <button className="update-btn">Add Song</button>
         </section>
     )
 

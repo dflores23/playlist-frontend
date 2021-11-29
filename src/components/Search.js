@@ -1,5 +1,6 @@
 import VideoCard from "./VideoCard"
 import {useState} from "react"
+import Newform from "./Newform"
 require('dotenv').config()
 
 const Search = (props) => {
@@ -66,6 +67,7 @@ const Search = (props) => {
       {searchResults.length > 1 ? displayResults() : <h1>Search Now</h1>}
     </>
   );
+
 
 
 } 
