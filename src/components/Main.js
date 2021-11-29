@@ -64,7 +64,7 @@ const Main = props => {
         </Route>
 
           <Route path="newplaylist" element={
-            <Newform playlist={playlists}/>
+          <Newform addPlaylist={createPlaylist} playlist={playlists}/>
           } />
         <Route
           path="search"
