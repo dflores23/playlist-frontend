@@ -5,74 +5,14 @@ import Index from "../pages/Index"
 import Show from "../pages/Show"
 import VidIndex from "../pages/VidIndex"
 import Search from "./Search";
+import Login from "../pages/Login"
   
 
 
 const Main = props => {
-  //Playlists state
-  const [playlists, setPlaylists] = useState(null)
-  //Videos state
-  const [videos, setVideos] = useState(null)
-  //params State
-  
-
-  const playlistId = useLocation().pathname.slice(10)
+  const {createVideo, createPlaylist, deletePlaylist, playlists, videos} = props
 
 
-
-
-  const URL = "https://playlist-backend1.herokuapp.com/playlist/";
-
-
-  
-  const getPlaylists = async () => {
-    const response = await fetch(URL);
-    const data = await response.json()
-    console.log(data)
-    setPlaylists(data)
-  }
-
-  const getVideos = async () => {
-    const response = await fetch(URL + playlistId);
-    const data = await response.json()
-    console.log(data)
-    setVideos(data)
-  }
-
-  const createPlaylist = async (playlist) => {
-    await fetch(URL, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(playlist)
-    })
-    getPlaylists()
-  }
-
-  const createVideo = async (video) => {
-    await fetch(URL, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(video)
-    })
-    getPlaylists()
-  }
-
-  const deletePlaylist = async (id) => {
-    await fetch(URL + id, {
-      method: "delete"
-    })
-    getPlaylists()
-  }
-
-  useEffect(() => getPlaylists(), []);
-
-
-  useEffect(() => getVideos(), []);
- 
 
   return (
     <main>
@@ -94,6 +34,11 @@ const Main = props => {
           <Route path="newvideo" element={
             <Search playlists={playlists} createVideo={createVideo} />
           } />
+          
+          <Route path="login" element={
+            <Login/>
+          } />
+          
         </Route>
       </Routes>
     </main>
