@@ -43,7 +43,7 @@ const Index =props => {
 
   return (
     <>
-      <h1>Index</h1>
+      <h1>Find your video</h1>
       <Search/>
       <Newform />
       {props.playlists ? loaded() : loading()}
