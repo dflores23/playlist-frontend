@@ -49,7 +49,7 @@ const Main = props => {
           } /> */}
         </Route>
         <Route
-          path="newplaylist"
+          path="videosearch"
           element={<Search playlists={playlists} createVideo={createVideo} />}
         />
       </Routes>
