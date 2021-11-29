@@ -2,7 +2,7 @@
    Variables
 ----------------------------------*/
 
-
+import CustomButton from "../components/CustomButton"
 import { Link, useNavigate, Outlet } from "react-router-dom"
 import Newform from "../components/Newform"
 import Form from "../components/Newform"
@@ -29,7 +29,7 @@ const Index =props => {
         <div key={_id} className="playlist">
           <Outlet/>
           <Link to={"/playlist/"+_id}><p>{playlistName}</p></Link>
-          <button id={_id} onClick={removePlaylist}>Delete</button>
+          <CustomButton buttonText="delete" buttonFunction={removePlaylist} buttonType= "delete-btn" />
          
         </div>
       )
