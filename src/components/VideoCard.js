@@ -1,9 +1,9 @@
 
 const VideoCard = props => {
   const { vidSource, vidTitle } = props
-  console.log("This is vidSource: " + vidSource)
-  console.log("This is vidTitle: " + vidTitle)
-  console.log(vidSource, vidTitle)
+  // console.log("This is vidSource: " + vidSource)
+  // console.log("This is vidTitle: " + vidTitle)
+  // console.log(vidSource, vidTitle)
   
   return (
     <>
@@ -18,7 +18,6 @@ const VideoCard = props => {
       ></iframe>
       <h1>{vidTitle}</h1>
 
-      <button >Add to your playlist</button>
     </>
   );
 

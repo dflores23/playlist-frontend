@@ -44,8 +44,6 @@ const Index =props => {
   return (
     <>
       <h1>Index</h1>
-      <Search/>
-      <Newform />
       {props.playlists ? loaded() : loading()}
     </>
   )

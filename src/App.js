@@ -42,7 +42,7 @@ function App() {
   };
 
   const createVideo = async (video) => {
-    await fetch(URL, {
+    await fetch(URL + "newvideo", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,8 @@ function App() {
         deletePlaylist={deletePlaylist}
         playlists={playlists}
         videos={videos}
-        createVideo= {createVideo}
+        createVideo={createVideo}
+        getVideos = {getVideos}
       />
     </div>
   );
