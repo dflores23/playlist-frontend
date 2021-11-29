@@ -22,7 +22,9 @@ const VidIndex = props => {
     navigate("/")
   }
 
+
   useEffect(()=> getVideos(props.videos), [])
+
 
   const loaded = () => (
     props.videos.map((video) => {

@@ -1,3 +1,4 @@
+
 import VideoCard from "./VideoCard";
 import { useState } from "react";
 import CustomButton from "./CustomButton";
@@ -7,6 +8,7 @@ const Search = (props) => {
   const apiKey = process.env.REACT_APP_APIKEY;
   const [searchPhrase, setSearchPhrase] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+
 
   const getResults = async (term) => {
     term = term.split(" ").join("%20");
@@ -25,12 +27,14 @@ const Search = (props) => {
     setSearchPhrase(event.target.value);
   };
 
+
   const displayResults = () =>
     searchResults.map((searchResult) => {
       console.log("searchResult:", searchResult);
       const { id, snippet } = searchResult;
       const source = `https://www.youtube.com/embed/${id.videoId}`;
       let title = snippet.title.replaceAll("&#39;", "'");
+
 
       return (
         <>
@@ -65,11 +69,13 @@ const Search = (props) => {
         <input type="submit" value="search"></input>
       </form>
 
+
       {searchResults.length > 1 ? (
         displayResults()
       ) : (
         <h1>Type in the searchbox above to add videos to your playlist</h1>
       )}
+
     </>
   );
 };

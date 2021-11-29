@@ -1,5 +1,6 @@
 import { useState } from "react";
 const VideoCard = props => {
+
   const { vidSource, vidTitle, playlists, videoInfo, createVideo } = props
   const vidChannel = props.search ? videoInfo.snippet.channelTitle: ""
   const [video, setVideo] = useState({
@@ -87,8 +88,10 @@ const VideoCard = props => {
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
+
         ></iframe>
         {props.search ? displayForm(): <></>}
+
     </>
   );
 

@@ -8,6 +8,7 @@ import Search from "./Search";
 import Login from "../pages/Login"
 import Newform from "./Newform";
   
+
 import Home from "../pages/Home"
 // import Signup from "../pages/Signup"
 
@@ -40,6 +41,7 @@ const Main = props => {
             }
           />
 
+
           <Route path="newvideo" element={
             <Search playlists={playlists} createVideo={createVideo} />
           } />
@@ -60,11 +62,13 @@ const Main = props => {
             <Signup/>
           } /> */}
         </Route>
+
           <Route path="newplaylist" element={
             <Newform playlist={playlists}/>
           } />
         <Route
           path="search"
+
           element={<Search playlists={playlists} createVideo={createVideo} />}
         />
       </Routes>

@@ -42,6 +42,7 @@ function Newform(props) {
                     onChange={handleChange} />
                 <input type="submit" value="Create Playlist"/>
             </form>
+
         </section>
     )
 
