@@ -13,10 +13,16 @@ import VideoCard from "../components/VideoCard"
 const VidIndex = props => {
   const navigate = useNavigate()
 
-  const removePlaylist = (e) => {
+  const {getVideos} = props
+
+
+
+  const removeVideo = (e) => {
     props.deletePlaylist(e.target.id)
     navigate("/")
   }
+
+  useEffect(()=> getVideos(props.videos), [])
 
   const loaded = () => (
     props.videos.map((video) => {
@@ -40,9 +46,7 @@ const VidIndex = props => {
 
   return (
     <>
-      <h1>Video Index</h1>
-      <Search/>
-      <Newform />
+      <h1>My Video Playlist</h1>
       {props.videos ? loaded() : loading()}
     </>
   )
