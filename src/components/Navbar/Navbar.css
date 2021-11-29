@@ -36,7 +36,9 @@
     list-style: none;
     width: 75%;
 } 
+
 .search,
+.home,
 .newPlaylist,
 .playlist,
 .signup,
@@ -64,6 +66,11 @@
     margin-right: 40px;
     cursor: pointer;
     border-color: transparent; */
+}
+
+.home:hover{
+    color: white;
+    cursor: pointer;
 }
 .logo:hover {
     color: white;
@@ -143,7 +150,9 @@
         left: -100%; */
     }
 
+
     .search,
+    .home,
     .newPlaylist,
     .playlist,
     .signup,
@@ -176,6 +185,38 @@
     }
     .menu-icon-button:active {
         color: red;
+    }
+
+    .home:hover{
+    color: black;
+    cursor: pointer;
+}
+.logo:hover {
+    color: rgb(164, 144, 144);
+}
+.newPlaylist:hover {
+        color: black;
+        cursor: pointer;
+        /* border: 1px solid white; 
+        border-radius: 10px; */
+    }
+    .playlist:hover {
+        color: black;
+        cursor: pointer;
+        /* border: 1px solid white; 
+        border-radius: 10px; */
+    }
+    .signup:hover {
+        color: black;
+        cursor: pointer;
+        /* border: 1px solid white; 
+        border-radius: 10px; */
+    }
+    .login:hover {
+        color: black;
+        cursor: pointer;
+        /* border: 3px solid white; 
+        border-radius: 10px; */
     }
 
 

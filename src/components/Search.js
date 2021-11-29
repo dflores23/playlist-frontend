@@ -9,12 +9,14 @@ const Search = (props) => {
 
   const getResults = async (term) => {
     term = term.split(" ").join("%20")
-    console.log(term)
+    console.log("This is term: " + term)
     const response = await fetch(
       `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${term}&key=${apiKey}`
       );
       const data = await response.json()
-      console.log(data);
+      //console.log("This is response: " + response);
+      //console.log("This is data: " + data);
+      //console.log("This is data: " + data.items);
       setSearchResults(data.items)
   };
 
@@ -23,7 +25,7 @@ const Search = (props) => {
   
     const displayResults = () => (
       searchResults.map((searchResult) => {
-        
+        console.log("searchResult:", searchResult)
         const { id, snippet } = searchResult
         let title = snippet.title.replaceAll('&#39;', "'")
 
