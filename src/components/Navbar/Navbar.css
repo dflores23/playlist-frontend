@@ -1,0 +1,317 @@
+/* https://www.youtube.com/watch?v=P3W7MZ3JkyA */
+/* https://react-icons.github.io/react-icons/icons?name=fa */
+/* T-T */
+:root {
+  --main-bg-color: #4d06f5;
+  --text-color: black;
+  --hover-color: white;
+  --mobile-bg-color:#675e7b;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.logo {
+    margin-left: 10px;
+}
+
+
+.nav-links{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
+}
+
+.nav-links-mobile{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
+} 
+
+.search,
+.home,
+.newPlaylist,
+.playlist,
+.signup,
+.login {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.login {
+   border: 1px solid var(--hover-color); 
+   border-radius: 10px;
+} 
+
+.menu-icon-button {
+    display: none;
+    /* font-size: 18px;
+    color: white;
+    background-color: transparent;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    border-color: transparent; */
+}
+
+.home:hover{
+    color: white;
+    cursor: pointer;
+}
+.logo:hover {
+    color: white;
+}
+.search:hover {
+    color: white;
+    cursor: pointer;
+}
+.newPlaylist:hover {
+        color: white;
+        cursor: pointer;
+        /* border: 1px solid white; 
+        border-radius: 10px; */
+    }
+.playlist:hover {
+        color: white;
+        cursor: pointer;
+        /* border: 1px solid white; 
+        border-radius: 10px; */
+    }
+.signup:hover {
+        color: white;
+        cursor: pointer;
+        /* border: 1px solid white; 
+        border-radius: 10px; */
+    }
+.login:hover {
+        color: white;
+        cursor: pointer;
+        /* border: 3px solid white; 
+        border-radius: 10px; */
+    }
+
+@media (max-width: 952px){
+    .logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    .Log{
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 35px;
+    }
+    /* .nav-links {
+        display: none;
+    } */
+    .nav-links{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: var(--mobile-bg-color);
+        top: 59px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav-links-mobile{
+        display: none;
+        /* position: absolute;
+        display: block;
+        list-style: none;
+        background-color: var(--mobile-bg-color);
+        top: 59px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+        height: 100%;
+        left: -100%; */
+    }
+
+
+    .search,
+    .home,
+    .newPlaylist,
+    .playlist,
+    .signup,
+    .login{
+        color: white;
+        text-align: center;
+        padding: 32px;
+        transition: all 0.5s ease-out;
+    }
+    .signup{
+        border: none;
+    }
+    .menu-icon-button{
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        top: 15px;
+        right: 25px;
+    }
+
+    .login {
+        border: none;
+    }
+
+    .menu-icon-button:hover {
+        color: white;
+    }
+    .menu-icon-button:active {
+        color: red;
+    }
+
+    .home:hover{
+    color: black;
+    cursor: pointer;
+}
+.logo:hover {
+    color: rgb(164, 144, 144);
+}
+.newPlaylist:hover {
+        color: black;
+        cursor: pointer;
+        /* border: 1px solid white; 
+        border-radius: 10px; */
+    }
+    .playlist:hover {
+        color: black;
+        cursor: pointer;
+        /* border: 1px solid white; 
+        border-radius: 10px; */
+    }
+    .signup:hover {
+        color: black;
+        cursor: pointer;
+        /* border: 1px solid white; 
+        border-radius: 10px; */
+    }
+    .login:hover {
+        color: black;
+        cursor: pointer;
+        /* border: 3px solid white; 
+        border-radius: 10px; */
+    }
+
+
+    /* .menu-icon-button{
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4b2c50;
+        top: 59px;
+        text-align: center;
+        transition: all .5s; 
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    .check:active ~ ul {
+        left: 0;
+    } */
+
+    /* .Log{
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 35px;
+    } */
+    /* .nav-links{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: var(--mobile-bg-color);
+        left: 0;
+        top: 0;
+        transition: all 0.5s ease-out;
+        width: 100%;
+    }
+    .nav-links-mobile{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: orange;
+        left: 0;
+        top: 75px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+    }
+
+    .newPlaylist,
+    .myPlaylist,
+    .login,
+    .signup {
+        color: white;
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        transition: all .5s ease;
+    }
+
+   
+
+    .login {
+        border: none;
+    }
+
+    .mobile-menu-icon{
+        display: block;
+        position: absolute;
+        font-size: 32px;
+        color: white;
+        background-color: violet;
+        border: none;
+        outline: none;
+        top: 15px;
+        right: 25px;
+    } */
+
+    /* .menu-icon-button {
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    border-color: transparent;
+    } */
+}
