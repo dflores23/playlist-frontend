@@ -35,7 +35,7 @@ const VidIndex = props => {
     
       return (
         <div key={_id} className="video-card">
-          <VideoCard vidSource={vidUrl} vidTitle={vidName} />
+          <VideoCard vidSource={vidUrl} thisVid={video} updateVideo={props.updateVideo} vidTitle={vidName} playlists={props.playlists}/>
           <CustomButton
             buttonText="delete video"
             buttonFunction={props.deleteVideo}
@@ -55,10 +55,10 @@ const VidIndex = props => {
 
   return (
     <>
-      <h1>My Video Playlist</h1>
+      <h1></h1>
       {props.videos ? loaded() : loading()}
     </>
-  )
+  );
 }
 
 export default VidIndex

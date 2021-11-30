@@ -30,11 +30,8 @@ const Index =props => {
         <div key={_id} className="playlist">
           <Outlet/>
           <Link to={"/playlist/"+_id}><p>{playlistName}</p></Link>
-
           <p className="userName">{playlist.userName}</p>
           <CustomButton buttonText="delete" buttonFunction={props.deletePlaylist} buttonType="delete-btn" className="deleteButton" _id={_id}/>
-
-         
         </div>
       )
     })
