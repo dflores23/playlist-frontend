@@ -14,7 +14,7 @@ import Home from "../pages/Home"
 
 
 const Main = props => {
-  const {createVideo, createPlaylist, deletePlaylist, playlists, videos, getVideos, deleteVideo} = props
+  const {createVideo, createPlaylist, deletePlaylist, playlists, videos, getVideos, deleteVideo, updateVideo} = props
 
 
 
@@ -53,7 +53,7 @@ const Main = props => {
 
           <Route
             path=":id"
-            element={<VidIndex videos={videos} getVideos={getVideos} deleteVideo={deleteVideo} />}
+            element={<VidIndex updateVideo={updateVideo} videos={videos} getVideos={getVideos} deleteVideo={deleteVideo} playlists={playlists}/>}
           />
 
           <Route path="login" element={<Login />} />
