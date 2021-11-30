@@ -45,6 +45,7 @@ code {
 .usernameSpan{
   display: flex;
   justify-content: space-around;
+  margin: 3px;
 }
 .usernameInput,
 .playlistNameInput,
@@ -59,6 +60,20 @@ span {
 .createPlaylistButton{
   align-content: center;
   text-align: center;
+  margin-top: 2vw;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+.createPlaylistButton:hover{
+  color: lightgray;
+  background-color: mediumseagreen;
+}
+.deleteButton:hover {
+  background-color: red;
+}
+.deleteButton:hover {
+  color: red;
 }
 
 
@@ -81,5 +96,7 @@ span {
     width: 50%;
     margin-top: 1px;
   }
+
+  
 
 }

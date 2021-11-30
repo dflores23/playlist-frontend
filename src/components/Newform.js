@@ -54,9 +54,8 @@ function Newform(props) {
                         onChange={handleChange}
                         className="playlistTagsInput" />
                 </div>
-                <input type="submit" value="Create Playlist" className="createPlaylistButton"/>
-
             </form>
+            <input type="submit" value="Create Playlist" className="createPlaylistButton" />
 
         </section>
     )
