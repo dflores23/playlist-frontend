@@ -27,20 +27,35 @@ function Newform(props) {
     }
     return (
         <section>
-            <form onSubmit={handleSubmit}>
-                <input placeholder="Username"
+            <form onSubmit={handleSubmit} className="form">
+                <div className="usernameSpan">
+                <span>Username:    </span>
+                <input placeholder="Name"
                     name="userName"
+
                     value={playlist.userName}
-                    onChange={handleChange} />
-                <input placeholder="Playlist Name"
-                    name="playlistName"
-                    value={playlist.playlistName}
-                    onChange={handleChange} />
-                <input placeholder="Tag Name"
-                    name="playlistTags"
-                    value={playlist.playlistTags}
-                    onChange={handleChange} />
-                <input type="submit" value="Create Playlist"/>
+                    onChange={handleChange} 
+                    className="usernameInput"/>
+                </div>
+                <div className="usernameSpan">
+                    <span>Playlist Tag:</span>
+                    <input placeholder="Untitled Playlist"
+                        name="playlistName"
+                        value={playlist.playlistName}
+                        onChange={handleChange}
+                        className="playlistNameInput" />
+                    
+                </div>
+                <div className="usernameSpan">
+                    <span>Playlist name: </span>
+                    <input placeholder="Category"
+                        name="playlistTags"
+                        value={playlist.playlistTags}
+                        onChange={handleChange}
+                        className="playlistTagsInput" />
+                </div>
+                <input type="submit" value="Create Playlist" className="createPlaylistButton"/>
+
             </form>
 
         </section>

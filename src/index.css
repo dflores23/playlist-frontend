@@ -11,3 +11,75 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.outterContainer{
+  background-color: white
+}
+
+.playlistsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-content: center;
+}
+
+.playlist {
+  border: 1px solid black; 
+  border-radius: 3px;
+  background-color: rgb(168, 100, 237);
+  width: 15%;
+  margin: auto;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form > input {
+  display: flex;
+  flex-direction: column;
+}
+
+.usernameSpan{
+  display: flex;
+  justify-content: space-around;
+}
+.usernameInput,
+.playlistNameInput,
+.playlistTagsInput{
+  margin-left: 4px;
+}
+
+span {
+  margin-right: auto;
+}
+
+.createPlaylistButton{
+  align-content: center;
+  text-align: center;
+}
+
+
+
+@media screen and (max-width: 780px) {
+  .playlistsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .playlist {
+    width: 100%;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .form > input {
+    width: 50%;
+    margin-top: 1px;
+  }
+
+}
