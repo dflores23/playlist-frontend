@@ -2,7 +2,7 @@
 /* https://react-icons.github.io/react-icons/icons?name=fa */
 /* T-T */
 :root {
-  --main-bg-color: #4d06f5;
+  --main-bg-color: #a27ef5;
   --text-color: black;
   --hover-color: white;
   --mobile-bg-color:#675e7b;
@@ -20,6 +20,7 @@
 
 .logo {
     margin-left: 10px;
+    color: var(--text-color);
 }
 
 
@@ -40,11 +41,11 @@
 .search,
 .home,
 .newPlaylist,
-.playlist,
+.playlistNav,
 .signup,
 .login {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     font-size: 20px;
     padding: 10px 20px;
     margin: 0 10px;
@@ -69,36 +70,37 @@
 }
 
 .home:hover{
-    color: white;
+    color: var(--hover-color);
     cursor: pointer;
 }
 .logo:hover {
-    color: white;
+    color: var(--hover-color);
+    cursor: pointer;
 }
 .search:hover {
-    color: white;
+    color: var(--hover-color);
     cursor: pointer;
 }
 .newPlaylist:hover {
-        color: white;
+        color: var(--hover-color);
         cursor: pointer;
         /* border: 1px solid white; 
         border-radius: 10px; */
     }
-.playlist:hover {
-        color: white;
+.playlistNav:hover {
+        color: var(--hover-color);
         cursor: pointer;
         /* border: 1px solid white; 
         border-radius: 10px; */
     }
 .signup:hover {
-        color: white;
+        color: var(--hover-color);
         cursor: pointer;
         /* border: 1px solid white; 
         border-radius: 10px; */
     }
 .login:hover {
-        color: white;
+        color: var(--hover-color);
         cursor: pointer;
         /* border: 3px solid white; 
         border-radius: 10px; */
@@ -154,7 +156,7 @@
     .search,
     .home,
     .newPlaylist,
-    .playlist,
+    .playlistNav,
     .signup,
     .login{
         color: white;
@@ -194,13 +196,17 @@
 .logo:hover {
     color: rgb(164, 144, 144);
 }
+.search:hover {
+    color: var(--text-color);
+    cursor: pointer;
+}
 .newPlaylist:hover {
         color: black;
         cursor: pointer;
         /* border: 1px solid white; 
         border-radius: 10px; */
     }
-    .playlist:hover {
+    .playlistNav:hover {
         color: black;
         cursor: pointer;
         /* border: 1px solid white; 

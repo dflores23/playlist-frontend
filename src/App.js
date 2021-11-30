@@ -10,7 +10,7 @@ function App() {
   const [playlists, setPlaylists] = useState(null);
   //Videos state
   const [videos, setVideos] = useState(null);
-  //params State
+  
   const playlistId = useLocation().pathname.slice(10);
   
 
@@ -58,7 +58,13 @@ function App() {
     });
     getPlaylists();
   };
-
+  const deleteVideo = async (slug) => {
+    await fetch(URL + slug, {
+      method: "delete",
+    });
+    getVideos();
+  };
+  
   useEffect(() => getPlaylists(), []);
 
   useEffect(() => getVideos(), []);
@@ -68,6 +74,7 @@ function App() {
       <Main
         createPlaylist={createPlaylist}
         deletePlaylist={deletePlaylist}
+        deleteVideo={deleteVideo}
         playlists={playlists}
         videos={videos}
         createVideo={createVideo}

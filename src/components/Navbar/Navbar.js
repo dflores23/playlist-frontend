@@ -24,7 +24,7 @@ import { FaStream, FaMusic } from "react-icons/fa";
             <Link to="/newplaylist" className="newPlaylist">
                 <li>New Playlist</li>
             </Link>
-            <Link to="/playlist" className="playlist">
+            <Link to="/playlist" className="playlistNav">
                 <li>Playlist</li>
             </Link>
             <Link to="/signup" className="signup">

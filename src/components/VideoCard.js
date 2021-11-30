@@ -26,8 +26,13 @@ const VideoCard = props => {
     videoCorrected.playlistID = playlists
       .filter(playlist=> playlist.playlistName === videoCorrected.playlistName )[0]._id
     console.log(videoCorrected);
-
     createVideo(videoCorrected)
+    setVideo({
+    vidComments: "",
+    playlistID: "",
+    vidRating: "",
+    vidUrl: vidSource,
+    vidChannel: vidChannel})
   };
   const getPlaylistOptions = () => {
     return (
@@ -46,7 +51,8 @@ const VideoCard = props => {
               value={playlist.playlistName}
               
             />
-          ))}
+            ))}
+            <option value=""/>
         </datalist>
       </>
     );
