@@ -21,6 +21,16 @@
 .logo {
     margin-left: 10px;
     color: var(--text-color);
+    text-decoration: none;
+}
+
+.app-name {
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    display: inline;
+    padding-left: 20px;
+
 }
 
 

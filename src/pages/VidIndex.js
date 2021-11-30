@@ -55,10 +55,10 @@ const VidIndex = props => {
 
   return (
     <>
-      <h1>My Video Playlist</h1>
+      <h1></h1>
       {props.videos ? loaded() : loading()}
     </>
-  )
+  );
 }
 
 export default VidIndex

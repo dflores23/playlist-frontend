@@ -11,21 +11,20 @@ import { FaStream, FaMusic } from "react-icons/fa";
         const [isMobile, setIsMobile] = useState(true);
 
     return <nav className="navbar">
-        <Link to="/home"className="logo"><FaMusic /></Link>
+        <Link to="/" className="logo">
+            <FaMusic />
+            <h1 className="app-name">Vidster</h1>
+        </Link>
 
         <ul className={isMobile ? "nav-links-mobile" : "nav-links"} onClick={() => setIsMobile(!isMobile)}>
             <Link to="/search" className="search">
                 <li>Search</li>
             </Link>
-            <Link to="/home" className="home">
-                <li>Home</li>
-
-            </Link>
             <Link to="/newplaylist" className="newPlaylist">
                 <li>New Playlist</li>
             </Link>
             <Link to="/playlist" className="playlistNav">
-                <li>Playlist</li>
+                <li>My Playlists</li>
             </Link>
             <Link to="/signup" className="signup">
                 <li>Sign Up</li>
