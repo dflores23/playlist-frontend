@@ -74,7 +74,11 @@ Learning all these new technologies and taking on the challenges meant that in t
 
 ## Planned Upgrades and Improvements
 User Authentication and User Authorization
+
 Share Playlists with other users
+
 Additional styling
+
 Playlist Cover Images
+
 Song Playlists 
