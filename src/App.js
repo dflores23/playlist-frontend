@@ -49,7 +49,20 @@ function App() {
       },
       body: JSON.stringify(video),
     });
-    getPlaylists();
+    getVideos();
+  };
+
+  const updateVideo = async (video) => {
+    console.log(URL + "update/" + video._id)
+    console.log("==========Video=========", video)
+    await fetch(URL + "update/" + video._id, {
+      method: "put",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(video),
+    });
+    getVideos();
   };
 
   const deletePlaylist = async (id) => {
@@ -58,6 +71,8 @@ function App() {
     });
     getPlaylists();
   };
+
+
   const deleteVideo = async (slug) => {
     await fetch(URL + slug, {
       method: "delete",
@@ -75,6 +90,7 @@ function App() {
         createPlaylist={createPlaylist}
         deletePlaylist={deletePlaylist}
         deleteVideo={deleteVideo}
+        updateVideo={updateVideo}
         playlists={playlists}
         videos={videos}
         createVideo={createVideo}
