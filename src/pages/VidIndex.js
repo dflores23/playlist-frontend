@@ -9,6 +9,7 @@ import Newform from "../components/Newform"
 import Form from "../components/Newform"
 import Search from "../components/Search"
 import VideoCard from "../components/VideoCard"
+import CustomButton from "../components/CustomButton"
 
 const VidIndex = props => {
   const navigate = useNavigate()
@@ -29,14 +30,20 @@ const VidIndex = props => {
   const loaded = () => (
     props.videos.map((video) => {
       console.log("video:", video)
-      const { _id, vidName, genre, artist, album, image, vidUrl } = video
+      const { _id, vidName, genre, artist, album, image, vidUrl, playlistID } = video
       console.log("id: ",_id)
     
       return (
-        <div key={_id} className="playlist">
-          <VideoCard vidSource={vidUrl} vidTitle={vidName}/>
+        <div key={_id} className="video-card">
+          <VideoCard vidSource={vidUrl} vidTitle={vidName} />
+          <CustomButton
+            buttonText="delete video"
+            buttonFunction={props.deleteVideo}
+            buttonType="delete-btn"
+            _id = {`${playlistID}/${_id}`}
+          />
         </div>
-      )
+      );
     })
   )
 

@@ -32,7 +32,8 @@ function Newform(props) {
                 <span>Username:    </span>
                 <input placeholder="Name"
                     name="userName"
-                    value={playlist.name}
+
+                    value={playlist.userName}
                     onChange={handleChange} 
                     className="usernameInput"/>
                 </div>
@@ -40,7 +41,7 @@ function Newform(props) {
                     <span>Playlist Tag:</span>
                     <input placeholder="Untitled Playlist"
                         name="playlistName"
-                        value={playlist.song}
+                        value={playlist.playlistName}
                         onChange={handleChange}
                         className="playlistNameInput" />
                     
@@ -49,11 +50,12 @@ function Newform(props) {
                     <span>Playlist name: </span>
                     <input placeholder="Category"
                         name="playlistTags"
-                        value={playlist.artist}
+                        value={playlist.playlistTags}
                         onChange={handleChange}
                         className="playlistTagsInput" />
                 </div>
                 <input type="submit" value="Create Playlist" className="createPlaylistButton"/>
+
             </form>
 
         </section>
