@@ -25,7 +25,7 @@ const Index =props => {
         <div key={_id} className="playlist">
           <Outlet/>
           <Link to={"/playlist/"+_id}><p>{playlistName}</p></Link>
-          <CustomButton buttonText="delete" deletePlaylist={props.deletePlaylist} buttonType="delete-btn" _id={_id}/>
+          <CustomButton buttonText="delete" buttonFunction={props.deletePlaylist} buttonType="delete-btn" _id={_id}/>
          
         </div>
       )

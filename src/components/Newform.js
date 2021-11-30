@@ -30,15 +30,15 @@ function Newform(props) {
             <form onSubmit={handleSubmit}>
                 <input placeholder="Username"
                     name="userName"
-                    value={playlist.name}
+                    value={playlist.userName}
                     onChange={handleChange} />
                 <input placeholder="Playlist Name"
                     name="playlistName"
-                    value={playlist.song}
+                    value={playlist.playlistName}
                     onChange={handleChange} />
                 <input placeholder="Tag Name"
                     name="playlistTags"
-                    value={playlist.artist}
+                    value={playlist.playlistTags}
                     onChange={handleChange} />
                 <input type="submit" value="Create Playlist"/>
             </form>

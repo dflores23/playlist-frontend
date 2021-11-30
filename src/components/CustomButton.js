@@ -1,9 +1,10 @@
 function CustomButton(props) {
-    const { buttonType, buttonFunction, buttonText, deletePlaylist, _id } = props
+    const { buttonType, buttonFunction, buttonText, _id } = props
     
     const handleClick = (e) => {
         console.log(e.target)
-        deletePlaylist(e.target.id)
+        console.log(buttonFunction)
+        buttonFunction(e.target.id)
     }
 
     return <div>
