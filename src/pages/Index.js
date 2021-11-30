@@ -14,10 +14,6 @@ const Index =props => {
 
 
 
-  const removePlaylist = (e) => {
-    props.deletePlaylist(e.target.id)
-    navigate("/")
-  }
 
   const loaded = () => (
     props.playlists.map((playlist) => {
@@ -29,7 +25,7 @@ const Index =props => {
         <div key={_id} className="playlist">
           <Outlet/>
           <Link to={"/playlist/"+_id}><p>{playlistName}</p></Link>
-          <CustomButton buttonText="delete" buttonFunction={removePlaylist} buttonType= "delete-btn" />
+          <CustomButton buttonText="delete" deletePlaylist={props.deletePlaylist} buttonType="delete-btn" _id={_id}/>
          
         </div>
       )
