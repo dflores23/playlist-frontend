@@ -17,19 +17,24 @@ code {
 }
 
 .playlistsContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  align-content: center;
+  justify-content: center;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content:space-between;
-  align-content: center;
+  align-content: center; */
 }
 
 .playlist {
   border: 1px solid black; 
   border-radius: 3px;
   background-color: rgb(168, 100, 237);
-  width: 15%;
-  margin: auto;
-
+  /* width: 15%; */
+  /* margin: auto; */
+margin-left: 3px;
+margin-bottom: 3px;
 }
 
 .form {
@@ -41,16 +46,20 @@ code {
   display: flex;
   flex-direction: column;
 }
-
+.userName {
+  color: rgb(80, 82, 222)
+}
 .usernameSpan{
-  display: flex;
-  justify-content: space-around;
+  /* display: flex;
+  justify-content: center; */
   margin: 3px;
 }
 .usernameInput,
 .playlistNameInput,
 .playlistTagsInput{
-  margin-left: 4px;
+  margin:auto;
+  margin-top: 10px;
+  /* margin-left: 4px; */
 }
 
 span {
@@ -59,14 +68,14 @@ span {
 
 .createPlaylistButton{
   align-content: center;
-  text-align: center;
+  /* text-align: center; */
   margin-top: 2vw;
   margin-left: 50%;
   margin-right: 50%;
 }
 
 .createPlaylistButton:hover{
-  color: lightgray;
+  color: white;
   background-color: mediumseagreen;
 }
 .deleteButton:hover {
@@ -75,7 +84,10 @@ span {
 .deleteButton:hover {
   color: red;
 }
-
+.delete-btn:hover {
+  color: white;
+  background-color: red;
+}
 
 
 @media screen and (max-width: 780px) {
@@ -93,10 +105,18 @@ span {
     width: 100%;
   }
   .form > input {
-    width: 50%;
+    width: 25%;
     margin-top: 1px;
   }
-
+  .createPlaylistButton{
+    margin-top: 2px;
+    width: 0px;
+  /* align-content: center;
+  text-align: center;
+  margin-top: 2vw;
+  margin-left: 50%;
+  margin-right: 50%; */
+  }
   
 
 }
