@@ -3,7 +3,7 @@ A video saving, sharing, and playlisting web application by David Flores, Edward
 
 ![2021-11-30_17 36 08](https://user-images.githubusercontent.com/87156044/144139337-f4c85d00-9efb-4a3f-8be2-18370bc26b2b.png)
 
-##Links
+## Links
 Deployed App: https://mystifying-hermann-6ecd7b.netlify.app/
 
 Deployed Backend: https://playlist-backend1.herokuapp.com/playlist/
