@@ -13,7 +13,6 @@ const Index =props => {
   const navigate = useNavigate()
 
 
-
   const removePlaylist = (e) => {
     props.deletePlaylist(e.target.id)
     navigate("/")
@@ -29,7 +28,8 @@ const Index =props => {
         <div key={_id} className="playlist">
           <Outlet/>
           <Link to={"/playlist/"+_id}><p>{playlistName}</p></Link>
-          <CustomButton buttonText="delete" buttonFunction={removePlaylist} buttonType= "delete-btn" />
+          <p className="userName">{playlist.userName}</p>
+          <CustomButton buttonText="delete" buttonFunction={removePlaylist} buttonType= "delete-btn" className="deleteButton"/>
          
         </div>
       )
@@ -43,8 +43,12 @@ const Index =props => {
 
   return (
     <>
-      <h1>Index</h1>
-      {props.playlists ? loaded() : loading()}
+    <div className="outterContainer">
+      <h1>List of Playlists:</h1>
+      <div className="playlistsContainer">
+        {props.playlists ? loaded() : loading()}
+      </div>
+    </div>
     </>
   )
 }
