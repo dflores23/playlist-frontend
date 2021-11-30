@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Vidster
+A video saving, sharing, and playlisting web application by David Flores, Edward Cabral and Craig McGowan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Links
+Deployed App: https://mystifying-hermann-6ecd7b.netlify.app/
 
-## Available Scripts
+Deployed Backend: https://playlist-backend1.herokuapp.com/playlist/
 
-In the project directory, you can run:
+Frontend Github Repo: https://github.com/dflores23/playlist-frontend
 
-### `npm start`
+Backend Github Repo: https://github.com/dflores23/playlist-backend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Team Trello Board: https://trello.com/b/2iCKm9Nj/playlist
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Figma Planning Board: https://www.figma.com/file/WFQKqTVwkm94Qqhbx8fFNO/MyPlaylist
 
-### `npm test`
+## User Stories?
+As a user, I can see my list of playlists.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As a user, I can click on one of the links in my playlist and have it direct me to that link.
 
-### `npm run build`
+As a user, I can add content to my playlist.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As a user, I can delete content from my playlist.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Roles
+**Release manager ( David)**- responsible for handling branches, keeping mastersafe, and resolving merge conflicts if the developers cannot resolve them.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Product manager (Ed)**- responsible for prioritizing tasks so that the user gets the most out of the app -- this will usually be the originator of the project idea.
 
-### `npm run eject`
+**Lead front-end dev ( Craig)**- responsible for breaking ties when the group has disagreements on front-end coding, and for designing a general plan for front-end development, e.g. file structure and state management
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Lead back-end dev ( David)**- responsible for breaking ties when the group has disagreements on back-end coding, and for designing a general plan for back-end development, e.g. file structure and schema definitions
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://user-images.githubusercontent.com/87156044/142262465-4e1ac85e-f305-4f1b-8350-cfcebcad249f.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Team Planning Board
+![image](https://user-images.githubusercontent.com/87156044/142070338-ce7806a7-9844-4f35-8908-5be56d03b38c.png)
 
-## Learn More
+## Routing Table
+![image](https://user-images.githubusercontent.com/87156044/142260268-9300007d-b8d2-45c3-bc45-4bd1984f02ac.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Component Tree
+![image](https://user-images.githubusercontent.com/87156044/142265708-c422749f-665e-4432-b527-d59c15d05d02.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Planned Upgrades and Improvements
+User Authentication and User Authorization
+Share Playlists with other users
+Additional styling
+Playlist Cover Images
+Song Playlists 
